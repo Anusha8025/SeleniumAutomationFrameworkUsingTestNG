@@ -135,9 +135,6 @@ public class SalesforceLoginScript extends BaseTest{
 		String actual=driver.getTitle();
 		System.out.println("actual : " + actual);
 		
-		WebElement navLinksEle= driver.findElement(By.xpath("//*[@id=\"phHeader\"]/tbody/tr/td[3]/div/div[3]/div/a[1]/text()"));
-		String navLinksEleTEXT=navLinksEle.getText();
-		System.out.println("navLinksEleTEXT : " + navLinksEleTEXT);
 
 		if(actual.equals(expected))
 			System.out.println("testcase passed. Login Successful");
@@ -151,7 +148,7 @@ public class SalesforceLoginScript extends BaseTest{
 		arrowEle.click();
 		System.out.println("Arrow clicked");
 		
-		
+		displayDrownDownItems();
 		WebElement menuItemsEle =driver.findElement(By.xpath("/html/body/div[1]/div[1]/table/tbody/tr/td[3]/div/div[3]/div/div/div[2]/div[3]/a[5]"));
 		menuItemsEle.click();
 		System.out.println("Logout selected");
